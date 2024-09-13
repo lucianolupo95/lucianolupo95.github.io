@@ -1,0 +1,68 @@
+/* src/styles/Home.css */
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1d; /* Fondo gris oscuro */
+  color: #a8ff60; /* Texto verde suave */
+  font-family: "Roboto Mono", monospace; /* Fuente monospace más moderna */
+}
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #5cffc0; /* Borde verde suave */
+  border-radius: 10px;
+  background-color: rgba(26, 26, 29, 0.9); /* Fondo semi-transparente */
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #5cffc0; /* Borde verde suave */
+}
+
+.download-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: #282c34; /* Botón oscuro grisáceo */
+  color: #a8ff60;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 1px solid #5cffc0; /* Borde verde suave */
+}
+
+.download-cv-button:hover {
+  background-color: #5cffc0; /* Efecto hover con fondo verde suave */
+  color: #282c34; /* Texto oscuro al hacer hover */
+  transform: scale(1.05); /* Ligero aumento al hacer hover */
+}
+
+h1 {
+  margin: 10px 0;
+  color: #60c0ff; /* Azul suave para títulos */
+  text-shadow: 0 0 5px #60c0ff; /* Sombra suave azul */
+}
+
+p {
+  margin: 10px 0;
+  color: #c8e6c9; /* Verde grisáceo para texto */
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .home-container {
+    width: 90%;
+    padding: 10px;
+  }
+}

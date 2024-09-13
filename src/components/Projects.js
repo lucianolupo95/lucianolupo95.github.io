@@ -4,7 +4,6 @@ import "../styles/Projects.css";
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedTech, setSelectedTech] = useState("all");
-  const [isInViewport, setIsInViewport] = useState(true);
   const [projectsPerPage, setProjectsPerPage] = useState(3); // Número de proyectos por página
   const projectsRef = useRef(null);
 
@@ -48,6 +47,7 @@ const Projects = () => {
     new Set(projectList.flatMap((project) => project.technologies))
   );
 
+  // Filtrar proyectos según la tecnología seleccionada
   const filteredProjects =
     selectedTech === "all"
       ? projectList
@@ -72,6 +72,11 @@ const Projects = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Volver a la primera página cuando cambia el filtro
+    setCurrentPage(0);
+  }, [selectedTech]);
+
   const numberOfPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
   const handlePageChange = (page) => {
@@ -87,19 +92,21 @@ const Projects = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setIsInViewport(entry.isIntersecting);
+          // Puedes utilizar `entry.isIntersecting` para realizar acciones aquí si lo necesitas
         });
       },
       { threshold: 0.5 }
     );
 
-    if (projectsRef.current) {
-      observer.observe(projectsRef.current);
+    const currentRef = projectsRef.current; // Copiar el valor del ref
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (projectsRef.current) {
-        observer.unobserve(projectsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

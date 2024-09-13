@@ -15,7 +15,7 @@ const Home = () => {
         <p>
           Soy un desarrollador de software especializado en desarrollo Backend.
         </p>
-        <a href={cv} download className="download-cv-button">
+        <a href={cv} download="LucianoLupo" className="download-cv-button">
           Descargar CV
         </a>
       </div>

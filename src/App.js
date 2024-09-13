@@ -2,6 +2,8 @@
 import React from "react";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Experiences from "./components/Experiences";
+import ContactForm from "./components/ContactForm";
 import "./App.css"; // Puedes agregar estilos globales aquí
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <main>
         <Home />
         <Projects />
+        <Experiences />
+        <ContactForm />
         {/* Otras secciones irán aquí */}
       </main>
       <footer className="App-footer">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "../styles/ContactForm.css"; // Importar el CSS correspondiente
 
 const ContactForm = () => {
@@ -7,24 +8,43 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    setIsSending(true);
 
-    // Aquí puedes añadir lógica para enviar el formulario (por ejemplo, usando fetch o axios)
+    // Configura los parámetros para EmailJS
+    const templateParams = {
+      from_name: name,
+      user_email: email,
+      reply_to: email,
+      message,
+    };
 
-    // Simular una respuesta exitosa o fallida
-    try {
-      // Aquí puedes realizar una petición a un servidor o servicio de correo
-      setSuccess(true);
-      setError(false);
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch (err) {
-      setSuccess(false);
-      setError(true);
-    }
+    emailjs
+      .send(
+        "service_9zl7bgt", // Reemplaza con tu Service ID de EmailJS
+        "template_rcfc9bu", // Reemplaza con tu Template ID de EmailJS
+        templateParams,
+        "DktrKq5rYzBBvrWE1" // Reemplaza con tu User ID de EmailJS
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccess(true);
+          setError(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.error("FAILED...", err);
+          setSuccess(false);
+          setError(true);
+        }
+      )
+      .finally(() => setIsSending(false));
   };
 
   return (
@@ -60,7 +80,9 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit" disabled={isSending}>
+          {isSending ? "Enviando..." : "Enviar"}
+        </button>
         {success && (
           <p className="success-message">¡Mensaje enviado con éxito!</p>
         )}

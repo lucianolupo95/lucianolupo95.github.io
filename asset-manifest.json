@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0906fb41.css",
-    "main.js": "/portfolio/static/js/main.c39f644f.js",
-    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
-    "static/media/LucianoLupo.pdf": "/portfolio/static/media/LucianoLupo.d41db8481f4c3e60f5df.pdf",
-    "static/media/Golang.png": "/portfolio/static/media/Golang.3579b5817dea2ab8fa2f.png",
-    "static/media/nodejs.png": "/portfolio/static/media/nodejs.bc74d7efa518349141c4.png",
-    "static/media/foto.jpg": "/portfolio/static/media/foto.09d898e6f2130dbc4eb1.jpg",
-    "index.html": "/portfolio/index.html",
-    "main.0906fb41.css.map": "/portfolio/static/css/main.0906fb41.css.map",
-    "main.c39f644f.js.map": "/portfolio/static/js/main.c39f644f.js.map",
-    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/static/css/main.0906fb41.css",
+    "main.js": "/static/js/main.fecff337.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/LucianoLupo.pdf": "/static/media/LucianoLupo.d41db8481f4c3e60f5df.pdf",
+    "static/media/Golang.png": "/static/media/Golang.3579b5817dea2ab8fa2f.png",
+    "static/media/nodejs.png": "/static/media/nodejs.bc74d7efa518349141c4.png",
+    "static/media/foto.jpg": "/static/media/foto.09d898e6f2130dbc4eb1.jpg",
+    "index.html": "/index.html",
+    "main.0906fb41.css.map": "/static/css/main.0906fb41.css.map",
+    "main.fecff337.js.map": "/static/js/main.fecff337.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0906fb41.css",
-    "static/js/main.c39f644f.js"
+    "static/js/main.fecff337.js"
   ]
 }

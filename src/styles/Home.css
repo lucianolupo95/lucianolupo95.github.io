@@ -6,7 +6,8 @@
   height: 100vh;
   background-color: #1a1a1d; /* Fondo gris oscuro */
   color: #a8ff60; /* Texto verde suave */
-  font-family: "Roboto Mono", monospace; /* Fuente monospace más moderna */
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
 }
 
 .home-container {
@@ -63,5 +64,8 @@ p {
   .home-container {
     width: 90%;
     padding: 10px;
+  }
+  .home-section {
+    font-size: 20px;
   }
 }

@@ -13,11 +13,11 @@ const Experience = () => {
       title: "Pasante en el área de Desarrollo de RRHH y Servicios Generales. ",
       company: "Transener S.A.",
       companyLink: "https://www.transener.com.ar/",
-      description: `- Análisis de capacitaciones.
-        - Carga de facturas en sistema SAP.
-        - Actualización de base de datos de empleados en software de capacitación.
-        - Coordinación y Logística de eventos de capacitación en la empresa.
-        - Administración de correo interno y externo.`,
+      description: `Análisis de capacitaciones.
+        Carga de facturas en sistema SAP.
+        Actualización de base de datos de empleados en software de capacitación.
+        Coordinación y Logística de eventos de capacitación en la empresa.
+        Administración de correo interno y externo.`,
       programmingRelated: false,
       startDate: "2014",
       endDate: "2016",

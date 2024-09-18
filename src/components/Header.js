@@ -20,22 +20,22 @@ const Header = () => {
         <ul className={`nav-list ${isMenuOpen ? "open" : ""}`}>
           <li className="nav-item">
             <a href="#home" onClick={() => setIsMenuOpen(false)}>
-              Home
+              Inicio
             </a>
           </li>
           <li className="nav-item">
             <a href="#projects" onClick={() => setIsMenuOpen(false)}>
-              Projects
+              Proyectos
             </a>
           </li>
           <li className="nav-item">
             <a href="#experience" onClick={() => setIsMenuOpen(false)}>
-              Experience
+              Experiencia
             </a>
           </li>
           <li className="nav-item">
             <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-              Contact
+              Contacto
             </a>
           </li>
         </ul>

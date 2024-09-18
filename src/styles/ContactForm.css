@@ -3,10 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ocupa al menos el 100% del viewport */
+  min-height: 90vh; /* Ocupa al menos el 100% del viewport */
   padding: 20px;
   background-color: #121212;
   color: #e0e0e0;
+  box-sizing: border-box;
 }
 
 .contact-form {

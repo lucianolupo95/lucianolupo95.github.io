@@ -58,7 +58,7 @@
 
   .nav-list {
     position: absolute;
-    top: 60px;
+    top: 2rem;
     right: 0;
     background-color: #0a0a0a;
     flex-direction: column;

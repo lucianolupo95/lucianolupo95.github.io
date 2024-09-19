@@ -86,6 +86,7 @@ const Experience = () => {
       id: 7,
       title: "Recepción",
       company: "IMED Levante",
+      companyLink: "http://www.imedlevante.com/es/",
       description: `Recepción de Urgencias de pacientes angloparlantes e hispanoparlantes`,
       programmingRelated: false,
       startDate: "2024",

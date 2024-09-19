@@ -80,7 +80,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" disabled={isSending}>
+        <button id="submit-btn" type="submit" disabled={isSending}>
           {isSending ? "Enviando..." : "Enviar"}
         </button>
         {success && (
